@@ -1,0 +1,30 @@
+{
+	"manifest_version": 3,
+	"name": "JIRA Copy",
+	"version": "0.1",
+	"description": "Copies JIRA ID & the Summary in a presentable foramt.",
+	"author": "theadisingh",
+	"icons": {
+		"16": "icons/JiraCopy-16.png",
+		"48": "icons/JiraCopy-48.png",
+		"128": "icons/JiraCopy-128.png"
+	},
+	"action": {
+		"default_title": "JIRA Copy",
+		"default_icon": "icons/JiraCopy-128.png"
+	},
+	"commands": {
+		"copytoclipboard": {
+			"suggested_key": {
+				"default": "Alt+Q",
+				"windows": "Alt+Q"
+			},
+			"description": "Copy JIRA to Clipboard"
+		}
+	},
+	"permissions": ["activeTab", "clipboardWrite", "scripting"],
+	"host_permissions": ["*://*.atlassian.net/browse/*"],
+	"background": {
+		"service_worker": "background.js"
+	}
+}
