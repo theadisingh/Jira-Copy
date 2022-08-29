@@ -24,6 +24,8 @@ const JiraCopier = () => {
 
 // On Extension Button Click
 chrome.action.onClicked.addListener((tab) => {
+	if (!tab.url) return;
+	if (tab.url && tab.url.includes("chrome://")) return;
 	chrome.scripting.executeScript({
 		target: { tabId: tab.id },
 		function: JiraCopier,
@@ -32,6 +34,8 @@ chrome.action.onClicked.addListener((tab) => {
 
 // On Keyboard Shortcut Pressed
 chrome.commands.onCommand.addListener((command, tab) => {
+	if (!tab.url) return;
+	if (tab.url && tab.url.includes("chrome://")) return;
 	switch (command) {
 		case "copytoclipboard":
 			chrome.scripting.executeScript({
