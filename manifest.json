@@ -23,7 +23,6 @@
 		}
 	},
 	"permissions": ["activeTab", "clipboardWrite", "scripting"],
-	"host_permissions": ["*://*.atlassian.net/browse/*"],
 	"background": {
 		"service_worker": "background.js"
 	}
