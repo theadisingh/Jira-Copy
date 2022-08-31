@@ -14,7 +14,7 @@ The format is as follows `[ JIRA ID ] - JIRA TITLE`
 
 ### HOW TO USE JIRA COPY
 
-- Download or Clone this repository to your local area using
+- Download and Extract the files to a location or Clone this repository to your local area using
 
   `git clone https://github.com/theadisingh/Jira-Copy.git`
 
